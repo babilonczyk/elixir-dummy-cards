@@ -1,0 +1,8 @@
+# Ignore compiled files and build artifacts
+/_build
+
+# Ignore generated documentation
+/doc
+
+# Ignore dependencies
+/deps
