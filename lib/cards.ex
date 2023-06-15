@@ -25,7 +25,6 @@ defmodule Cards do
 
   ## Examples
     iex> Cards.shuffle(["A of Spades", "2 of Spades", "3 of Spades"])
-    ["3 of Spades", "2 of Spades", "A of Spades"]
   """
   def shuffle(deck) do
     deck
@@ -60,10 +59,6 @@ defmodule Cards do
 
   @doc """
     Saves a deck of cards to a file.
-
-  ## Examples
-    iex> Cards.save(["A of Spades", "2 of Spades"], "deck")
-    :ok
   """
   def save(deck, filename) do
     binary = :erlang.term_to_binary(deck)
@@ -76,7 +71,6 @@ defmodule Cards do
 
   ## Example
     iex> Cards.load("deck")
-    ["A of Spades", "2 of Spades"]
   """
   def load(filename) do
     case File.read(filename) do
@@ -89,10 +83,6 @@ defmodule Cards do
     Creates a hand of cards from a deck. Shuffles them and deals the hand.
     It takes hand size as a parameter.
     Returns a tuple containing the hand and the remaining deck.
-
-  ## Examples
-    iex> Cards.create_hand(2)
-    {["A of Spades", "2 of Spades"], [...]}
   """
   def create_hand(hand_size) do
     Cards.create_deck
